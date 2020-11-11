@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {FilterPipe} from './filter.pipe';
+import { AppListingComponent } from './app-listing/app-listing.component';
+import { SingleAppComponent } from './single-app/single-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterPipe,
-    LandingPageComponent
+    LandingPageComponent,
+    AppListingComponent,
+    SingleAppComponent
   ],
   imports: [
     BrowserModule,

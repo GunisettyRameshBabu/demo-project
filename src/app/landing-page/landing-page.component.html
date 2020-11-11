@@ -30,7 +30,7 @@
             </form>
             <div class="cus-re-item" *ngIf="searchText">
                 <ul>
-                    <li *ngFor="let item of searchItems | appFilter: searchText">{{item.name}}</li>
+                    <li *ngFor="let item of searchItems | appFilter: searchText" (click)="routing()">{{item.name}}</li>
                 </ul>
             </div>
         </div>
