@@ -1,1 +1,48 @@
-<p>app-listing works!</p>
+<div class="container mt-5">
+    <h3>Applications</h3>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="cus-list-item">
+                        <ul>
+                            <li *ngFor="let item of searchItems | appFilter: searchText" (click)="singleRouting()">{{item.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-12 mb-2">
+                    <button class="btn btn-danger">Add Application</button>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="cus-filter-list-item">
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

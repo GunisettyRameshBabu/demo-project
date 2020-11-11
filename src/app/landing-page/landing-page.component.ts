@@ -23,12 +23,7 @@ export class LandingPageComponent implements OnInit {
         {id: '10', name: 'Budget Tracking'},
     ];
 
-    secondArray = [];
-
-    constructor(
-        private router: Router
-    ) {
-    }
+    constructor(private router: Router) {}
 
     ngOnInit(): void {
     }
