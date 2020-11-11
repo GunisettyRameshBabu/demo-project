@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {FilterPipe} from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
+    FilterPipe,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
