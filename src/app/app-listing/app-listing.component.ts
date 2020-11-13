@@ -32,4 +32,5 @@ export class AppListingComponent implements OnInit {
     this.router.navigate(['singleApp']);
   }
 
+
 }

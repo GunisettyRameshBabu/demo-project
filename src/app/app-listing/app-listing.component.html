@@ -1,45 +1,74 @@
-<div class="container mt-5">
-    <h3 class="mb-4">Applications</h3>
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Search</button>
+<div style="background-color: #18458B; color: #FFFFFF">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="mb-4">Applications</h3>
+            </div>
+            <div class="col-md-4 mb-2 text-right">
+                <button class="btn btn-success add-button">Add Application</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search"
+                                   aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary btn-custom" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="cus-list-item">
+                            <ul>
+                                <li *ngFor="let item of searchItems | appFilter: searchText"
+                                    (click)="singleRouting()">
+
+                                    <div class="card mb-3 custom-card">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <img src="https://www.thebalance.com/thmb/hoVurg0bnTfXto416am9evmIBHo=/2122x1415/filters:fill(auto,1)/corporate-team-56a9a7173df78cf772a93eaa.jpg"
+                                                     class="card-img" style="height: 150px;width: auto" alt="...">
+                                            </div>
+                                            <div class="col-md-8" style="border-left: 1px solid #ccc;">
+                                                <div class="card-body">
+                                                    <h5 class="card-title" style="color: #3FAEA9">{{item.name}}</h5>
+                                                    <p class="card-text">HTML, CSS, NodeJs, AngularJs</p>
+                                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit amet .
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="cus-list-item">
-                        <ul>
-                            <li *ngFor="let item of searchItems | appFilter: searchText" (click)="singleRouting()">{{item.name}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="row">
-                <div class="col-sm-12 mb-2">
-                    <button class="btn btn-danger">Add Application</button>
-                </div>
-            </div>
-            <div class="row">
-
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="cus-filter-list-item">
-                        <ul>
-                            <li>Item 1</li>
-                            <li>Item 2</li>
-                            <li>Item 3</li>
-                            <li>Item 4</li>
-                        </ul>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6>Advanced Filters</h6>
+                        <div class="cus-filter-list-item">
+                                    <a href="#" class="badge badge-secondary badge-pill badge-custom">
+                                        Types
+                                    </a>
+                                    <a href="#" class="badge badge-secondary badge-pill badge-custom">
+                                        Area
+                                    </a>
+                                    <a href="#" class="badge badge-secondary badge-pill badge-custom">
+                                        Technologies
+                                    </a>
+                                    <a href="#" class="badge badge-secondary badge-pill badge-custom">
+                                        Technologies
+                                    </a>
+                        </div>
                     </div>
                 </div>
             </div>

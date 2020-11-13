@@ -185,15 +185,9 @@ h1, h2, h3, h4, h5, h6, h7{
 
 .cus-list-item li {
     list-style: none;
-    padding: 20px;
     cursor: pointer;
 }
 
-.cus-list-item li:hover {
-    background-color: #f5f5f5;
-    border-radius: 3px;
-    border-bottom: 1px solid red;
-}
 
 .cus-list-item ul {
     padding: 0;
@@ -219,7 +213,7 @@ h1, h2, h3, h4, h5, h6, h7{
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #ccc;
+    background: #18458B;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -276,6 +270,7 @@ h1, h2, h3, h4, h5, h6, h7{
 }
 #sidebar ul li {
     font-size: 14px;
+    border-bottom: 1px solid #3d5d9059;
 }
 #sidebar ul li:hover {
     background: #0d1214;
@@ -290,7 +285,7 @@ h1, h2, h3, h4, h5, h6, h7{
 #sidebar ul li a {
     padding: 10px 30px;
     display: block;
-    color: #000;
+    color: #ffffffde;
 }
 #sidebar ul li a span {
     margin-right: 15px;
@@ -367,7 +362,6 @@ a[data-toggle="collapse"] {
     list-style: none;
     padding: 15px 5px;
     cursor: pointer;
-    border: 1px solid #ccc;
     margin-top: 15px;
     border-radius: 10px;
 }
@@ -377,8 +371,62 @@ a[data-toggle="collapse"] {
 }
 .pr-details ul li:nth-child(odd){
     background-color: #f5f5f5;
+}
+.card-body p{
+    font-size: 13px;
+    color: #000000;
+}
+.card:hover{
+    background: #f5f5f5;
+}
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+.badge-custom{
+    padding: 10px 15px;
+    margin: 5px;
+}
+.custom-card{
+    border-radius: 0;
     padding: 10px;
 }
-
-
+.btn-custom{
+    background-color: black;
+    color: #fff;
+    border: 0;
+}
+.add-button{
+    background-color: #3AACED;
+    border-color: #3AACED;
+    border-radius: 0;
+}
+.add-button:hover{
+    background-color: #F9B90F;
+    border-color: #F9B90F;
+}
 /*# sourceMappingURL=Searchs_130.css.map */
+
+.panel-group .panel, .panel-heading {
+    border-radius: 0;
+}
+
+.panel-heading {
+    height: 20px;
+}
+
+.panel-primary {
+    border: none;
+}
+
+.panel-title a{
+    text-decoration: none;
+}
+.panel-body{
+    padding: 20px 10px;
+}
