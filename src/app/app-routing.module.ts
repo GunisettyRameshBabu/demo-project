@@ -6,6 +6,7 @@ import {SingleAppComponent} from './single-app/single-app.component';
 
 const routes: Routes = [
     {path: '', component: LandingPageComponent},
+    {path: 'appListing/:text', component: AppListingComponent},
     {path: 'appListing', component: AppListingComponent},
     {path: 'singleApp', component: SingleAppComponent}
 ];

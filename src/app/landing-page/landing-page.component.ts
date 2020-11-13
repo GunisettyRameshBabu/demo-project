@@ -30,7 +30,7 @@ export class LandingPageComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
     routing() {
-        this.router.navigate(['appListing']);
+        this.router.navigate(['appListing', this.searchText]);
     }
 
 }

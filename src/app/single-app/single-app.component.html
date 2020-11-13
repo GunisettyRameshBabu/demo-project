@@ -1,75 +1,74 @@
-<div class="container-fluid" style="background-color: #00649414">
+<div class="background" style=" padding-top: 5%;padding-left: 2%;">
     <div class="row">
         <nav id="sidebar">
             <ul class="list-unstyled components mt-3">
                 <li class="active">
-                    <a href="">Application Overview</a>
+                    <a routerLink='a'>Application Overview</a>
                 </li>
                 <li>
-                    <a href="">Application Roadmap</a>
+                    <a routerLink='a'>Application Roadmap</a>
                 </li>
                 <li>
-                    <a href="">Application Stream</a>
+                    <a routerLink='a'>Application Stream</a>
                 </li>
                 <li>
-                    <a href="">Application Functions</a>
+                    <a routerLink='a'>Application Functions</a>
                 </li>
                 <li>
-                    <a href="">Application Architecture</a>
+                    <a routerLink='a'>Application Architecture</a>
                 </li>
                 <li>
-                    <a href="">Application Tech</a>
+                    <a routerLink='a'>Application Tech</a>
                 </li>
                 <li>
-                    <a href="">Connected Application</a>
+                    <a routerLink='a'>Connected Application</a>
                 </li>
                 <li>
-                    <a href="">Information Security</a>
+                    <a routerLink='a'>Information Security</a>
                 </li>
                 <li>
-                    <a href="">Data Profile</a>
+                    <a routerLink='a'>Data Profile</a>
                 </li>
                 <li>
-                    <a href="">Product Measurement</a>
+                    <a routerLink='a'>Product Measurement</a>
                 </li>
                 <li>
-                    <a href="">Links</a>
+                    <a routerLink='a'>Links</a>
                 </li>
                 <li>
-                    <a href="">GDPR Details</a>
+                    <a routerLink='a'>GDPR Details</a>
                 </li>
                 <li>
-                    <a href="">Documentation</a>
+                    <a routerLink='a'>Documentation</a>
                 </li>
                 <li>
-                    <a href="">Product Attestations</a>
+                    <a routerLink='a'>Product Attestations</a>
                 </li>
             </ul>
         </nav>
         <div class="col-md-9">
             <div class="container-fluid">
-                <h4 class="pt-3 pb-3">EPay</h4>
+                <h4 class="pt-3 pb-3">{{item.name}}</h4>
                 <div class="header-single">
                     <h6 class="col-md-9 pl-0">Application Overview</h6>
-                    <button class="btn btn-danger float-right add-button">Edit</button>
+                    <button class="btn btn-primary float-right add-button" *ngIf="showEdit"
+                        (click)="edit()">Edit</button>
                 </div>
-                <div class="pr-details panel-group" id='accordion'>
+                <div class="pr-details panel-group" id='accordion' *ngIf="showEdit">
                     <ul>
                         <li>
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodyOne" data-toggle="collapse" data-parent="#accordion">
-                                            Short Description
+                                            Short Description <i class="fa fa-chevron-down" style="float: right;"></i>
+
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodyOne" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.shortDescription}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -79,16 +78,13 @@
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodyTwo" data-toggle="collapse" data-parent="#accordion">
-                                            Asset Type
+                                            Asset Type <i class="fa fa-chevron-down" style="float: right;"></i>
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodyTwo" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.assetType}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -98,16 +94,13 @@
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodyThree" data-toggle="collapse" data-parent="#accordion">
-                                            Status
+                                            Status <i class="fa fa-chevron-down" style="float: right;"></i>
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodyThree" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.status ? 'Active' : 'InActive'}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -118,16 +111,13 @@
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodyFour" data-toggle="collapse" data-parent="#accordion">
-                                            Strategy
+                                            Strategy <i class="fa fa-chevron-down" style="float: right;"></i>
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodyFour" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.strtegy}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -138,16 +128,14 @@
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodyFive" data-toggle="collapse" data-parent="#accordion">
-                                            Business Criticality
+                                            Business Criticality <i class="fa fa-chevron-down"
+                                                style="float: right;"></i>
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodyFive" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.businessCriticality}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -158,22 +146,77 @@
                                 <div class="panel-heading">
                                     <h6 class="panel-title">
                                         <a href="#panelBodySix" data-toggle="collapse" data-parent="#accordion">
-                                            Vendor
+                                            Vendor <i class="fa fa-chevron-down" style="float: right;"></i>
                                         </a>
                                     </h6>
                                 </div>
                                 <div id="panelBodySix" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in</p>
+                                        <p>{{item.Vendor}}/p>
                                     </div>
                                 </div>
                             </div>
                         </li>
 
                     </ul>
+                </div>
+                <div *ngIf="!showEdit">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">Short Description:</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" [(ngModel)]="shortDescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">Asset Type:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" [(ngModel)]="assetType" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">Status:</label>
+                            <div class="col-sm-6">
+                                <select [(ngModel)]="status" class="form-control">
+                                    <option value="true">Active</option>
+                                    <option value="false">InActive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">Strategy:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" [(ngModel)]="strategy" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">Business Criticality:</label>
+                            <div class="col-sm-6">
+                                <select [(ngModel)]="status" class="form-control">
+                                    <option value="true">High</option>
+                                    <option value="false">Low</option>
+                                    <option value="false">Medium</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-6">vendor:</label>
+                            <div class="col-sm-6">
+                                <select [(ngModel)]="status" class="form-control">
+                                    <option value="true">Volvo</option>
+                                    <option value="false">Dell</option>
+                                    <option value="false">Sony Ericson</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button class="btn btn-primary" (click)="save()"> Save </button> &nbsp;
+                                <button class="btn btn-primary" (click)="showEdit = !showEdit"> Cancel </button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>

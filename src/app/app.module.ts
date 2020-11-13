@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import {FilterPipe} from './filter.pipe';
 import { AppListingComponent } from './app-listing/app-listing.component';
 import { SingleAppComponent } from './single-app/single-app.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SingleAppComponent } from './single-app/single-app.component';
     FilterPipe,
     LandingPageComponent,
     AppListingComponent,
-    SingleAppComponent
+    SingleAppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

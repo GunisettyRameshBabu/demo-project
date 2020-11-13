@@ -1,17 +1,5 @@
 <div class="wrapper">
-    <nav class="navbar navbar-expand-md navbar-transparent cus-nav">
-        <div class="container">
-            <!-- <img class="img-fluid pr-3 aa-logo-img" src="" alt="logo"> -->
-            <a class="navbar-brand px-0 py-0" href="#">LOGO</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link cus-nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link cus-nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link cus-nav-link" href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   
 
     <div class="s130">
         <div class="in-box">
@@ -25,7 +13,7 @@
                     <input id="search" type="text" [(ngModel)]="searchText"  placeholder="What are you looking for?" [ngModelOptions]="{standalone: true}"/>
                 </div>
                 <div class="input-field second-wrap">
-                    <button class="btn-search" type="button">SEARCH</button>
+                    <button class="btn-search" type="button" (click)="routing()">SEARCH</button>
                 </div>
             </form>
             <div class="cus-re-item" *ngIf="searchText">
